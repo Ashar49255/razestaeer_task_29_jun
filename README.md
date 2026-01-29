@@ -11,16 +11,27 @@ CREATE DATABASE userdb;
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
 FLUSH PRIVILEGES;
 EXIT;
+
+
 **2. UPLOAD YOUR FILES TO SERVER:**
 Put these 3 files in /home/ubuntu/:
 •	main.py
 •	requirements.txt       fastapi             uvicorn              mysql-connector-python
 •	index.html
+
+
+
 **3. INSTALL PYTHON PACKAGES:**
 cd /home/ubuntu
 pip3 install -r requirements.txt
+
+
+
 **4. EDIT main.py:**
 DB_PASSWORD = ""  # Put your MySQL password here
+
+
+
 **5. RUN BACKEND:**
 python3 main.py
 Backend will run on port 8000.
@@ -45,8 +56,12 @@ server {
 }
 Save and restart:
 sudo systemctl restart nginx
+
+
 **7. EDIT index.html:**
 const API = 'http://YOUR_EC2_IP';  // Put your EC2 public IP
+
+
 **8. DONE!**
 
 
